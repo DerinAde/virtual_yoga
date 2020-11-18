@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="bg">
+<div class=form-container>
+<h1>Sign Up Here</h1>
+<br>
+<form class= "form" action="" method="post">
+    {{ form.hidden_tag() }}
+    <p>
+        {{ form.username(size=32,placeholder="username") }}<br>
+        {% for error in form.username.errors %}
+        <span style="color: dred;">[{{ error }}]</span>
+        {% endfor %}
+    </p>
+    <p>
+        {{ form.email(size=32,placeholder="email@address.com") }}<br>
+        {% for error in form.email.errors %}
+        <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+    </p>
+    <p>
+        {{ form.password(size=32,placeholder="password") }}<br>
+        {% for error in form.password.errors %}
+        <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+    </p>
+    <p>
+        {{ form.password2(size=32,placeholder="confirm password") }}<br>
+        {% for error in form.password2.errors %}
+        <span style="color: red;">[{{ error }}]</span>
+        {% endfor %}
+    </p>
+    <p>{{ form.submit() }}</p>
+</form>
+<div class="border-top pt-3">
+    <small class="text-muted">
+        Already Have An Account? <a class="ml-2" href="{{ url_for('login') }}">Sign In</a>
+    </small>
+    </div>
+</div>
+</div>
+{% endblock %}

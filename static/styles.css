@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=BenchNine:wght@300&family=Jacques+Francois+Shadow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;500&display=swap');
+html {
+  overflow: hidden;
+}
+
+body {
+   margin: 0;
+   
+}
+
+.bg {
+  background-image: url('../static/yoga2.jpeg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav {
+  background-color: rgb(213, 225, 232);
+  font-family: BenchNine, sans-serif;
+  font-size: 20px;
+  text-align: end;
+}
+
+#bar {
+  margin: 20px;
+ color: rgb(6, 36, 46);
+}
+
+.landing {
+  background-image: url('../static/yoga6.jpeg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 40vh;
+  font-family: BenchNine, sans-serif;
+  color: #eeeee5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.event{
+  margin: 30px;
+  margin-top: 10px;
+  font-family: BenchNine, sans-serif;
+  font-size: 20px;
+  color: #343431;
+}
+
+.details {
+  font-family: 45px;
+  font-weight: 900;
+  
+}
+.container {
+  font-family: BenchNine, sans-serif;
+  font-size: 35px;
+  color: #ac9f09;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1.form-container {
+  font-family: BenchNine, sans-serif;;
+}
+.form-container {
+  width: 300px;
+  height: 350px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+}
+.form-login {
+  width: 250px;
+  height: 150px;
+  background: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+  width: 150px;
+  height: 50px;
+  font-family: Courier, monospace;
+  font-size: 20px;
+  color: white;
+  background: #c7c0c3;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 2px 2px 20px 10px rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+  filter: brightness(95%);
+  background:  #ac9f09;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+button:disabled {
+  cursor: default;
+  filter: brightness(30%);
+}
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-height: 900px) {
+  .container, .bg {
+    background-position: center center;
+    background-size: cover;
+    width: auto;
+    height: 100%;
+  }
+    
+  button {
+    box-shadow: 5px 5px 30px 20px rgba(0, 0, 0, 0.5);
+  }
+}

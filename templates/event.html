@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="nav">
+    <a id="bar" href="/logout">Log Out</a>
+</div>
+    <div class="landing">
+            <h1>Please join us for an hour of Gentle Yoga.</h1>
+    </div>
+    <div class="event">
+            <p>
+                This event is free. Simple breathing exercises, stretches, and guided meditation for all bodies, minds, and spirits. We are offering two
+                experience levels.
+            </p>
+            <p>
+                All classes are taught via Zoom from Calgary AB.
+                You will receive a Zoom link approximately 30 minutes before class begins.
+                Classes are updated regularly, sign in to your account to stay updated.
+            </p>
+            <div class="details">
+                {% for detail in details %}
+        <p>Experience level: {{ detail.level }}</p>
+        <p>Date: {{ detail.date }}</p>
+        <p>Time: {{ detail.time }}</p>
+        {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
+{% endblock %}
+
